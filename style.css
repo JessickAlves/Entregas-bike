@@ -1,0 +1,104 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0; background: #f8f0f4;
+  color: #333;
+}
+header {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+h2 {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #a18cd1;
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+input[type="number"], input[type="date"], select {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #a18cd1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff9fb;
+  color: #333;
+  transition: border-color 0.3s;
+}
+input[type="number"]:focus, input[type="date"]:focus, select:focus {
+  border-color: #fbc2eb;
+  outline: none;
+}
+button {
+  grid-column: 1 / -1;
+  background: linear-gradient(45deg, #fbc2eb, #a18cd1);
+  color: #333;
+  border: none;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(251, 194, 235, 0.4);
+}
+button:hover {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+#summary {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+th, td {
+  border: 1px solid #a18cd1;
+  padding: 0.6rem;
+  text-align: center;
+}
+th {
+  background: #fad0c4;
+  color: #5a2a49;
+}
+canvas {
+  max-width: 100%;
+  height: 300px;
+  background: #fff9fb;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(161, 140, 209, 0.2);
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+  header {
+    font-size: 1.2rem;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+}

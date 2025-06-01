@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entregas Bike - Controle de Entregas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>Entregas Bike - Controle de Entregas</header>
+  <main>
+    <h2>Registrar Quantidade Diária</h2>
+    <form id="formEntrega">
+      <label for="data">Data (segunda a sábado)</label>
+      <input type="date" id="data" name="data" required />
+
+      <label for="door">Door</label>
+      <input type="number" id="door" name="door" min="0" value="0" required />
+
+      <label for="anjun">Anjun</label>
+      <input type="number" id="anjun" name="anjun" min="0" value="0" required />
+
+      <label for="logan">Logan</label>
+      <input type="number" id="logan" name="logan" min="0" value="0" required />
+
+      <label for="remedio">Remédio</label>
+      <input type="number" id="remedio" name="remedio" min="0" value="0" required />
+
+      <label for="insucesso">Insucessos (Total)</label>
+      <input type="number" id="insucesso" name="insucesso" min="0" value="0" required />
+
+      <label for="cep">CEP Inválido</label>
+      <input type="number" id="cep" name="cep" min="0" value="0" required />
+
+      <label for="naoLocalizado">Não Localizado</label>
+      <input type="number" id="naoLocalizado" name="naoLocalizado" min="0" value="0" required />
+
+      <label for="mudouSe">Mudou-se</label>
+      <input type="number" id="mudouSe" name="mudouSe" min="0" value="0" required />
+
+      <button type="submit">Salvar Entrega</button>
+    </form>
+
+    <section id="summary">
+      <h2>Resumo Semanal (Segunda a Sábado)</h2>
+      <table id="tableResumo" aria-label="Resumo semanal de entregas">
+        <thead>
+          <tr>
+            <th>Empresa</th>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+            <th>Sábado</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="btnPdf">Baixar Resumo em PDF</button>
+    </section>
+
+    <section id="charts">
+      <h2>Gráficos de Sucesso</h2>
+      <canvas id="barChart"></canvas>
+      <canvas id="pieChart" style="margin-top:2rem;"></canvas>
+
+      <h2 style="margin-top:3rem">Gráficos de Insucesso</h2>
+      <canvas id="insucessoBarChart"></canvas>
+      <canvas id="insucessoPieChart" style="margin-top:2rem;"></canvas>
+    </section>
+  </main>
+  <footer>Entregas Bike - Atualização em tempo real</footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
